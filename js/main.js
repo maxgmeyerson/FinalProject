@@ -11,13 +11,6 @@
 
 	var filename = "data/applicants.csv";
 
-function update(user) {
-	applicants = ["user", "stuff", "thing", "bam"];
-	writeToCsv(filename, applicants);
-	hideForm();
-}
-
-
 function readInCSV() {
 	/** @type {Array.<string>} */
 	var lines = [];
@@ -33,6 +26,13 @@ function readInCSV() {
 	for (var i = 0; i < lines.length; i++) {
 		applicants[i] = lines[i].split(",");
 	}
+}
+
+function submitButton() {
+	$("#submitBtn").click(function() {
+		writeToCsv(filename, applicants);
+		hideForm();
+	});
 }
 
 function writeToCsv(filename, rows) {
@@ -82,5 +82,5 @@ function hideForm() {
 
 window.onload = function () {
 	readInCSV();
-	writeToCsv(filename, applicants);
+	submitButton();
 };
