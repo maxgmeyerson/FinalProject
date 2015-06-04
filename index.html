@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: HB
+VERSION: 1.0
+CREATED: 1.24.2013
+ASSIGNMENT: HTML template
+-->
+<html lang="en" data-ng-app="WebDevApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Petoskey Web Development</title>
+		<link href="css/foundation.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="small-25 columns" id="header">
+			<div class="row">
+					<h1>Welcome to Petoskey Web Development!</h1>
+			</div>
+		</div>
+
+		<div class="small-10 columns" id="paragraph">
+			<div class="row">
+				<p>The Petoskey Web Development team works hard to create beautiful, responsive web pages and applications. We are located in the Petoskey High School, where we have access to a large amount of resources.</p>
+			</div>
+		</div>
+
+		<div class="small-25 columns" id="signup">
+			<div class="row">
+				<h4>Please fill out the form below if you are interested in joining the team.</h4>
+				<br/>
+			</div>
+		</div>
+
+
+		<div id="formWithPic">
+			<div class="row">
+				<div data-ng-controller="mainControl" class="small-7 columns" id="form">
+					<form novalidate class="simple-form">
+						Name: <input required type="text" ng-model="user.name" placeholder="Type Here"/><br />
+						E-mail: <input required type="email" ng-model="user.email" placeholder="Type Here" /><br />
+						Age: <input required type="number" ng-model="user.age"/><br/>
+						Type a short description about yourself: <input type="text" ng-model="user.description" placeholder="Type Here"/><br />
+						<input id="button1" type="submit" ng-click="update(user)" value="Submit" class="Small Button" />
+					</form>
+				</div>
+
+				<div id="pic" class="small-4 columns">
+					<img src="images/master-bates.jpg" alt="Master Bates">
+					<p>Our Head Developer, Howard Bates</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer" class="small-12 columns">
+			<div class="row">
+				<h6>Thank you for visiting the site.</h6>
+					<h6>Created by Max Meyerson, Developer</h6>
+					<h6>Copyright 2015</h6>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- SCRIPTS -->
+			<script src="js/angular.js"></script>
+			<script src="js/jquery-2.1.4.js"></script>
+			<script src="js/main.js"></script>
+			<script src="js/modernizr.custom.75475.js"></script>
+
+	</body>
+</html>
