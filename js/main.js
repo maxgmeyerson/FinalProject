@@ -7,9 +7,27 @@
 
 "use strict";
 
-	var applicants = [];
+/** @type {Array} */
+var applicants = [];
 
-	var filename = "data/applicants.csv";
+/** @type {Array} */
+var tempArray = [];
+
+/** @type {string} */
+var filename = "data/applicants.csv";
+
+
+function getData() {
+	/*$scope.name = tempArray[0];
+	$scope.email = tempArray[1];
+	$scope.age = tempArray[2];
+	$scope.description = tempArray[3];*/
+	tempArray = ["i","hate","this","project"];
+}
+
+function hideEnding() {
+	$("#noForm").hide();
+}
 
 function readInCSV() {
 	/** @type {Array.<string>} */
@@ -28,12 +46,20 @@ function readInCSV() {
 	}
 }
 
+function appendToCSV() {
+	applicants.push(tempArray);
+}
+
 function submitButton() {
 	$("#submitBtn").click(function() {
+		getData();
+		appendToCSV();
 		writeToCsv(filename, applicants);
 		hideForm();
 	});
 }
+
+
 
 function writeToCsv(filename, rows) {
 	var processRow = function (row) {
@@ -77,10 +103,14 @@ function writeToCsv(filename, rows) {
 }
 
 function hideForm() {
-	$("#form").hide();
+	$("#theForm").hide();
+	$("#noForm").show();
 }
 
+
+
 window.onload = function () {
+	hideEnding();
 	readInCSV();
 	submitButton();
 };

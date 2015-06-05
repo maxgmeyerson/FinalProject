@@ -36,12 +36,12 @@ ASSIGNMENT: HTML template
 
 		<div id="formWithPic">
 			<div class="row">
-				<div data-ng-controller="mainControl" class="small-7 columns" id="form">
+				<div data-ng-controller="mainControl" class="small-7 columns" id="theForm">
 					<form novalidate class="simple-form">
-						Name: <input required type="text" ng-model="user.name" placeholder="Type Here"/><br />
-						E-mail: <input required type="email" ng-model="user.email" placeholder="Type Here" /><br />
-						Age: <input required type="number" ng-model="user.age"/><br/>
-						Type a short description about yourself: <input type="text" ng-model="user.description" placeholder="Type Here"/><br />
+						Name: <input required type="text" ng-model="name" placeholder="Type Here"/><br />
+						E-mail: <input required type="email" ng-model="email" placeholder="Type Here" /><br />
+						Age: <input required type="number" ng-model="age"/><br/>
+						Type a short description about yourself: <input type="text" ng-model="description" placeholder="Type Here"/><br />
 						<input id="submitBtn" type="submit" value="Submit" class="Small Button" />
 					</form>
 				</div>
@@ -70,6 +70,8 @@ ASSIGNMENT: HTML template
 			<script src="js/angular.js"></script>
 			<script src="js/jquery-2.1.4.js"></script>
 			<script src="js/main.js"></script>
+			<script src="js/Angular/App.js"></script>
+			<script src="js/Angular/Controller.js"></script>
 			<script src="js/modernizr.custom.75475.js"></script>
 
 	</body>
