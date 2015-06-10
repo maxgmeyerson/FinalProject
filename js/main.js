@@ -10,20 +10,9 @@
 /** @type {Array} */
 var applicants = [];
 
-/** @type {Array} */
-var tempArray = [];
-
 /** @type {string} */
 var filename = "data/applicants.csv";
 
-
-function getData() {
-	/*$scope.name = tempArray[0];
-	$scope.email = tempArray[1];
-	$scope.age = tempArray[2];
-	$scope.description = tempArray[3];*/
-	tempArray = ["i","hate","this","project"];
-}
 
 function hideEnding() {
 	$("#noForm").hide();
@@ -46,14 +35,16 @@ function readInCSV() {
 	}
 }
 
-function appendToCSV() {
-	applicants.push(tempArray);
+function populateApplicants() {
+	applicants.push( $("#name").val());
+	applicants.push( $("#email").val());
+	applicants.push( $("#age").val());
+	applicants.push( $("#description").val());
 }
 
 function submitButton() {
 	$("#submitBtn").click(function() {
-		getData();
-		appendToCSV();
+		populateApplicants();
 		writeToCsv(filename, applicants);
 		hideForm();
 	});

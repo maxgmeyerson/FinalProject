@@ -38,11 +38,11 @@ ASSIGNMENT: HTML template
 			<div class="row">
 				<div data-ng-controller="mainControl" class="small-7 columns" id="theForm">
 					<form novalidate class="simple-form">
-						Name: <input required type="text" ng-model="name" placeholder="Type Here"/><br />
-						E-mail: <input required type="email" ng-model="email" placeholder="Type Here" /><br />
-						Age: <input required type="number" ng-model="age"/><br/>
-						Type a short description about yourself: <input type="text" ng-model="description" placeholder="Type Here"/><br />
-						<input id="submitBtn" type="submit" value="Submit" class="Small Button" />
+						Name: <input required type="text" ng-model="name" placeholder="Type Here" id="name" /><br />
+						E-mail: <input required type="email" ng-model="email" placeholder="Type Here" id="email" /><br />
+						Age: <input required type="number" ng-model="age" id="age" /><br/>
+						Type a short description about yourself: <input type="text" ng-model="description" placeholder="Type Here" id="description" /><br />
+						<input id="submitBtn" type="submit" value="Submit" class="Small Button"/>
 					</form>
 				</div>
 
